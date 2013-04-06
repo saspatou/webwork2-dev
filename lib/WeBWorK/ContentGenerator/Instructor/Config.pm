@@ -487,7 +487,8 @@ sub getConfigValues {
 	
 
 	# get list of localization dictionaries
-	my $localizeDir = $ce->{webworkDirs}{localize};
+	#my $localizeDir = $ce->{webworkDirs}{localize}; FIXME
+	my $localizeDir ="/opt/webwork/webwork2/lib/WeBWorK/Localize";
 	opendir(my $dh2, $localizeDir) || die "can't opendir $localizeDir: $!";
 	my %seen=();  # find the languages in the localize direction
 	my $languages =[ grep {!$seen{$_} ++}        # remove duplicate items
